@@ -14,7 +14,7 @@ public class LoanAgent {
 	
 		int creditScore = agency.getScore(ssn);
 	
-		if(creditScore > 720)  {
+		if(creditScore >= 720)  {
 			result = true;
 		}
 		
