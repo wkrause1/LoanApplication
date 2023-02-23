@@ -1,3 +1,6 @@
+package test.java;
+
+import prodCode.CreditAgency;
 
 public class CreditAgencyTestingStub implements CreditAgency {
 	

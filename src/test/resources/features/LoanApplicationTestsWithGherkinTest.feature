@@ -12,10 +12,10 @@ Feature: Application Approval
 
   Scenario: Score of 800
     Given I am an applicant with SSN "5255555555"
-    When I apply for a loan with 300 credit score
+    When I apply for a loan with 800 credit score
     Then My application should be "approved"
 
-  Scenario: Score of 300
+  Scenario: Score of 500
     Given I am an applicant with SSN "222222222"
-    When I apply for a loan with 300 credit score
+    When I apply for a loan with 500 credit score
     Then My application should be "declined"

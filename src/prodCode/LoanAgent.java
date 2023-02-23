@@ -3,7 +3,7 @@ package prodCode;
 public class LoanAgent {
 	
 	CreditAgency agency;
-	ErrorLog log;
+	String log = "";
 	
 	public void setCreditAgency(CreditAgency agency)  {
 		this.agency = agency;
@@ -14,21 +14,25 @@ public class LoanAgent {
 	
 		int creditScore = agency.getScore(ssn);
 	
-		if(creditScore >= 720)  {
+		if(creditScore > 720)  {
 			result = true;
 		}
 		
 		if (creditScore < 200 || creditScore > 850)  {
-		log.recordErrorMessage(creditScore + " is an invalid score");	
+		log = (creditScore + " is an invalid score");
 		
 		}
 		
 	return result;	
 	}
 
+
+
+	public String getErrorLog() {
+		return this.log;
+	}
+
 	public void setErrorLog(ErrorLog errorLog) {
-		this.log = errorLog;
-		
 	}
 }
 
