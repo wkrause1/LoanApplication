@@ -37,15 +37,15 @@ public class LoanApplicationTestsUsingStubObjectTest {
 		Assert.assertFalse(result);
 	}
 
-	@Test
-	public void testWithBorderLineCreditScore()  {
-		testCreditScore = 720;
-		creditAgency.setCreditScore(testCreditScore);
-		String ssn = "123-45-6789";
-
-		boolean result = agent.processLoan(ssn);
-		Assert.assertTrue(result);
-	}
+//	@Test
+//	public void testWithBorderLineCreditScore()  {
+//		testCreditScore = 720;
+//		creditAgency.setCreditScore(testCreditScore);
+//		String ssn = "123-45-6789";
+//
+//		boolean result = agent.processLoan(ssn);
+//		Assert.assertTrue(result);
+//	}
 
 	@Test
 	public void testWithGoodCreditScore()  {

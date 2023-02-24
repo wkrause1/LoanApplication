@@ -20,11 +20,16 @@ public class LoanApplicationStepDefinitions {
         ssn = SSN;
     }
 
-    @When("I apply for a loan with {int} credit score")
-    public void i_apply_for_a_loan_with_credit_score(int cScore) throws Throwable {
+    @When("My credit score is {int}")
+    public void my_credit_score_is(int cScore) throws Throwable {
         creditScore = cScore;
         agency.setCreditScore(cScore);
         agent.setCreditAgency(agency);
+
+    }
+
+    @When("I submit the application")
+    public void i_submit_the_application() throws Throwable {
         result = agent.processLoan(ssn);
     }
 
